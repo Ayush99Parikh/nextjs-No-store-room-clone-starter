@@ -65,3 +65,11 @@ model Product {
   orders      Order[]
   updatedAt   DateTime @updatedAt
 }
+
+model Interval {
+  createdAt        DateTime @default(now())
+  expiryDate       DateTime
+  id               String   @id @default(cuid())
+  subscriptionType String
+  updatedAt        DateTime @updatedAt
+}
