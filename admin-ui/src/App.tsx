@@ -25,6 +25,10 @@ import { ProductList } from "./product/ProductList";
 import { ProductCreate } from "./product/ProductCreate";
 import { ProductEdit } from "./product/ProductEdit";
 import { ProductShow } from "./product/ProductShow";
+import { IntervalList } from "./interval/IntervalList";
+import { IntervalCreate } from "./interval/IntervalCreate";
+import { IntervalEdit } from "./interval/IntervalEdit";
+import { IntervalShow } from "./interval/IntervalShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -85,6 +89,13 @@ const App = (): React.ReactElement => {
           edit={ProductEdit}
           create={ProductCreate}
           show={ProductShow}
+        />
+        <Resource
+          name="Interval"
+          list={IntervalList}
+          edit={IntervalEdit}
+          create={IntervalCreate}
+          show={IntervalShow}
         />
       </Admin>
     </div>
